@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Brand Name — Premium Pakistani Traditional & Lifestyle</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --primary: #9f1a2a;      /* Deep red - Pakistani traditional vibe */
+      --secondary: #d4af37;    /* Gold */
+      --dark: #1a1a1a;
+      --light: #f8f1e9;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 120px 20px 80px;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    }
+    header p {
+      font-size: 1.4rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 14px 32px;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      margin: 10px;
+      transition: all 0.3s;
+    }
+    .btn:hover { background: var(--secondary); color: var(--dark); transform: translateY(-3px); }
+
+    nav {
+      background: var(--dark);
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: var(--secondary); }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2.8rem;
+      margin-bottom: 2rem;
+      color: var(--primary);
+    }
+    .filters {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .filter-btn {
+      background: #ddd;
+      border: none;
+      padding: 10px 20px;
+      margin: 8px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-10px); }
+    .card img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+    }
+    .card-info {
+      padding: 20px;
+      text-align: center;
+    }
+    .card h3 { margin-bottom: 10px; font-size: 1.4rem; }
+    .price { color: var(--primary); font-weight: bold; font-size: 1.3rem; }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.5rem; }
+      nav ul { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#catalog">Catalog</a></li>
+      <li><a href="#provinces">By Province</a></li>
+      <li><a href="#beauty">Fragrances & Beauty</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header id="home">
+    <h1>Your Brand Name</h1>
+    <p>Premium Pakistani Traditional Dresses • All Provinces • All Communities • Fragrances • Skincare • Makeup</p>
+    <a href="#catalog" class="btn">Explore Collection</a>
+    <a href="#" class="btn" style="background:var(--secondary); color:var(--dark);">Coming Soon – Shop Now</a>
+  </header>
+
+  <section class="section" id="catalog">
+    <h2>Our Premium Catalog</h2>
+    
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="punjab">Punjab</button>
+      <button class="filter-btn" data-filter="sindh">Sindh</button>
+      <button class="filter-btn" data-filter="balochistan">Balochistan</button>
+      <button class="filter-btn" data-filter="kpk">KPK</button>
+      <button class="filter-btn" data-filter="kashmir">Kashmir</button>
+      <button class="filter-btn" data-filter="fragrance">Fragrances</button>
+      <button class="filter-btn" data-filter="skincare">Skincare</button>
+      <button class="filter-btn" data-filter="makeup">Makeup</button>
+    </div>
+
+    <div class="products">
+      <!-- Replace images & data with your real products -->
+      <div class="card" data-category="punjab">
+        <img src="https://images.unsplash.com/photo-1611312449412-6cefac5dc3e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Punjabi Formal Suit">
+        <div class="card-info">
+          <h3>Embroidered Punjabi Formal</h3>
+          <p class="price">PKR 12,999</p>
+        </div>
+      </div>
+      <div class="card" data-category="sindh">
+        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ajrak Sindhi Dress">
+        <div class="card-info">
+          <h3>Ajrak Sindhi Traditional</h3>
+          <p class="price">PKR 8,499</p>
+        </div>
+      </div>
+      <div class="card" data-category="balochistan">
+        <img src="https://images.unsplash.com/photo-1605733514905-9e0f5e25d0a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Balochi Embroidered">
+        <div class="card-info">
+          <h3>Balochi Hand-Embroidered</h3>
+          <p class="price">PKR 18,500</p>
+        </div>
+      </div>
+      <div class="card" data-category="kpk">
+        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pashtun Dress">
+        <div class="card-info">
+          <h3>Pashtun Traditional Frock</h3>
+          <p class="price">PKR 9,999</p>
+        </div>
+      </div>
+      <div class="card" data-category="fragrance">
+        <img src="https://images.unsplash.com/photo-1608248597788-35336b6230f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Attar Bottle">
+        <div class="card-info">
+          <h3>Premium Rose Attar</h3>
+          <p class="price">PKR 3,200</p>
+        </div>
+      </div>
+      <!-- Add 10–20 more cards like this -->
+    </div>
+  </section>
+
+  <section class="section" style="background:#fff; text-align:center;">
+    <h2>Coming Soon – Full E-Commerce Experience</h2>
+    <p>We are building a premium shopping experience with sizes, colors, filters by fabric (lawn, chiffon, silk), occasion (bridal, party, casual), and secure Pakistani payments.</p>
+    <a href="mailto:sameerkamal@example.com" class="btn">Contact for Pre-Orders</a>
+  </section>
+
+  <footer id="contact">
+    <p>&copy; 2026 Your Brand Name | All Rights Reserved</p>
+    <p>Contact: sameerkamal@example.com | WhatsApp: +92 3XX XXXXXXX</p>
+    <p>Follow us for updates!</p>
+  </footer>
+
+  <script>
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active from all
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        cards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
